@@ -1436,7 +1436,6 @@ function updateAnimation() {
         svgContainer.innerHTML = data.svg;
       }
 
-      // Verifica se essa cena exige o blackout de fim de música
       if (data.blackout) {
         blackoutOverlay.style.opacity = "1";
       } else {
@@ -1447,7 +1446,7 @@ function updateAnimation() {
 
       if (data.shakeScreen) {
         document.body.classList.remove("screen-shake");
-        void document.body.offsetWidth; // Força o reset da animação CSS instantaneamente
+        void document.body.offsetWidth;
         document.body.classList.add("screen-shake");
       }
     } else {
